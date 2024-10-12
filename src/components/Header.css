@@ -1,0 +1,56 @@
+.header {
+    background: linear-gradient(to right, #00bcd4, #009688); /* Gradient background */
+    color: white; /* White text color */
+    padding: 60px 20px; /* Increased padding for more space */
+    text-align: center; /* Center text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: relative; /* Positioning for pseudo-elements */
+    overflow: hidden; /* To contain the pseudo-elements */
+}
+
+.header h1 {
+    font-size: 3rem; /* Larger font size for the main title */
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+.header h2 {
+    font-size: 1.5rem; /* Size for the subtitle */
+    margin-top: 10px; /* Space above the subtitle */
+    font-weight: 300; /* Lighter font weight */
+}
+
+/* Optional: Adding a pseudo-element for decoration */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Slight overlay for effect */
+    z-index: 1; /* Behind the text */
+}
+
+.header h1,
+.header h2 {
+    position: relative; /* Positioning for z-index */
+    z-index: 2; /* Above the pseudo-element */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 40px 10px; /* Less padding on smaller screens */
+    }
+
+    .header h1 {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .header h2 {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+}
