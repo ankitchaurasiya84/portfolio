@@ -2,56 +2,74 @@
     padding: 40px;
     background-color: #f4f4f4;
     text-align: center;
-  }
-  
-  .project-list {
+}
+
+.project-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .project {
+}
+
+.project {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 15px;
     padding: 20px;
-    width: 200px;
-    height: 300px; /* Increased height */
+    width: 220px; /* Increased width for better spacing */
+    height: 350px; /* Increased height for better spacing */
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensures content is evenly distributed */
-  }
-  
-  .project-image {
+    overflow: hidden; /* Prevent overflow */
+}
+
+.project-image {
     width: 100%;
     height: 200px; /* Adjusted height to fit the card */
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
-  }
-  
-  .project h4 {
+}
+
+.project h4 {
     margin-bottom: 10px;
     font-size: 1.25em;
     color: #333;
-  }
-  
-  .project p {
-    font-size: 1em;
+}
+
+.project p {
+    font-size: 0.9em; /* Slightly smaller font size */
     color: #666;
     margin-bottom: auto; /* Pushes content to the bottom of the card */
-  }
-  
-  .project-link {
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    display: -webkit-box; /* Create a flexible box for multi-line truncation */
+    -webkit-box-orient: vertical; /* Specify vertical orientation */
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+}
+
+/* New Button Styles */
+.project-button {
     display: inline-block;
-    margin-right: 10px;
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .project-link:hover {
-    text-decoration: underline;
-  }
+    padding: 5px 10px; /* Smaller padding for smaller button */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    font-size: 0.8em; /* Smaller font size */
+    margin-right: 5px; /* Space between buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for effects */
+}
+
+.project-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.project-button:active {
+    transform: translateY(0); /* Reset lift effect on click */
+}

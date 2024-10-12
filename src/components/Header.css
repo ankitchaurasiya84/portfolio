@@ -1,17 +1,21 @@
 .header {
     background: linear-gradient(to right, #00bcd4, #009688); /* Gradient background */
     color: white; /* White text color */
-    padding: 60px 20px; /* Increased padding for more space */
+    padding: 20px; /* Padding for spacing */
     text-align: center; /* Center text */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     position: relative; /* Positioning for pseudo-elements */
     overflow: hidden; /* To contain the pseudo-elements */
+    height: 56.25vw; /* 16:9 Aspect Ratio (height = 9/16 * width) */
+    width: 100vw; /* Full width */
+}
+
+.header-content {
+    margin-bottom: 10px; /* Space between title and nav */
 }
 
 .header h1 {
     font-size: 3rem; /* Larger font size for the main title */
-    margin: 0; /* Remove default margin */
+    margin-top: 140px; /* Remove default margin */
     text-transform: uppercase; /* Uppercase text */
     letter-spacing: 2px; /* Spacing between letters */
 }
@@ -20,6 +24,41 @@
     font-size: 1.5rem; /* Size for the subtitle */
     margin-top: 10px; /* Space above the subtitle */
     font-weight: 300; /* Lighter font weight */
+}
+
+/* Navigation Styles */
+.nav {
+    background-color: #004d40; /* Darker background color for the nav */
+    padding: 10px 0; /* Padding for nav */
+    position: fixed; /* Fixes the nav at the top of the viewport */
+    top: 0; /* Sticks to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures it stays on top */
+    display: flex; /* Flexbox for alignment */
+    justify-content: flex-end; /* Align buttons to the right */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for effect */
+}
+
+.nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox for horizontal alignment */
+}
+
+.nav li {
+    margin: 0 15px; /* Space between buttons */
+}
+
+.nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav a:hover {
+    color: #ffeb3b; /* Change color on hover */
 }
 
 /* Optional: Adding a pseudo-element for decoration */
@@ -43,7 +82,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .header {
-        padding: 40px 10px; /* Less padding on smaller screens */
+        height: 30vw; /* Maintain aspect ratio but less height on smaller screens */
     }
 
     .header h1 {

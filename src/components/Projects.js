@@ -1,36 +1,39 @@
 import React from 'react';
 import './Projects.css';
+import img1 from './../assets/textutil.png';
+import img2 from './../assets/weather.png';
+import img3 from './../assets/amazon.png';
+import img4 from './../assets/base64.png';
 
 const Projects = () => {
-  // Array of project objects with image, live link, and GitHub link
   const projectList = [
     {
       title: 'Text Util Web App',
       description: 'Enter the text to analyze...',
-      image: 'path/to/textutil-image.jpg', // Replace with the actual image path
-      liveLink: 'https://textutil-live-link.com', // Replace with the actual live link
-      githubLink: 'https://github.com/yourusername/textutil', // Replace with the actual GitHub link
+      image: img1,
+      liveLink: 'https://textutil-live-link.com',
+      githubLink: 'https://github.com/yourusername/textutil',
     },
     {
       title: 'Weather App',
       description: 'Get weather information for a city.',
-      image: 'path/to/weatherapp-image.jpg', // Replace with the actual image path
-      liveLink: 'https://weatherapp-live-link.com', // Replace with the actual live link
-      githubLink: 'https://github.com/yourusername/weatherapp', // Replace with the actual GitHub link
+      image: img2,
+      liveLink: 'https://weatherapp-live-link.com',
+      githubLink: 'https://github.com/yourusername/weatherapp',
     },
     {
       title: 'Amazon UI Clone',
       description: 'Clone of Amazon\'s UI.',
-      image: 'path/to/amazonclone-image.jpg', // Replace with the actual image path
-      liveLink: 'https://amazonclone-live-link.com', // Replace with the actual live link
-      githubLink: 'https://github.com/yourusername/amazonclone', // Replace with the actual GitHub link
+      image: img3,
+      liveLink: 'https://amazonclone-live-link.com',
+      githubLink: 'https://github.com/yourusername/amazonclone',
     },
     {
       title: 'Base64 Encoder',
       description: 'Upload and convert to Base64.',
-      image: 'path/to/base64encoder-image.jpg', // Replace with the actual image path
-      liveLink: 'https://base64encoder-live-link.com', // Replace with the actual live link
-      githubLink: 'https://github.com/yourusername/base64encoder', // Replace with the actual GitHub link
+      image: img4,
+      liveLink: 'https://base64encoder-live-link.com',
+      githubLink: 'https://github.com/yourusername/base64encoder',
     },
   ];
 
@@ -43,12 +46,14 @@ const Projects = () => {
             <img src={project.image} alt={project.title} className="project-image" />
             <h4>{project.title}</h4>
             <p>{project.description}</p>
-            <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-link">
-              Live Demo
-            </a>
-            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
-              GitHub
-            </a>
+            <div className="project-buttons">
+              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-button">
+                Live Demo
+              </a>
+              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-button">
+                GitHub
+              </a>
+            </div>
           </div>
         ))}
       </div>
