@@ -11,34 +11,34 @@ const Projects = () => {
       title: 'Text Util Web App',
       description: 'Enter the text to analyze...',
       image: img1,
-      liveLink: 'https://textutil-live-link.com',
+      liveLink: 'https://ankitchaurasiya84.github.io/TextUtils/',
       githubLink: 'https://github.com/yourusername/textutil',
     },
     {
       title: 'Weather App',
       description: 'Get weather information for a city.',
       image: img2,
-      liveLink: 'https://weatherapp-live-link.com',
+      liveLink: 'https://ankitchaurasiya84.github.io/weatherwebapp/',
       githubLink: 'https://github.com/yourusername/weatherapp',
     },
     {
       title: 'Amazon UI Clone',
       description: 'Clone of Amazon\'s UI.',
       image: img3,
-      liveLink: 'https://amazonclone-live-link.com',
-      githubLink: 'https://github.com/yourusername/amazonclone',
+      liveLink: 'https://ankitchaurasiya84.github.io/amazon-clone/',
+      githubLink: 'https://github.com/ankitchaurasiya84/amazon-clone',
     },
     {
       title: 'Base64 Encoder',
       description: 'Upload and convert to Base64.',
       image: img4,
-      liveLink: 'https://base64encoder-live-link.com',
-      githubLink: 'https://github.com/yourusername/base64encoder',
+      liveLink: 'https://ankitchaurasiya84.github.io/base64encoder/',
+      githubLink: 'https://github.com/ankitchaurasiya84/base64encoder/tree/main',
     },
   ];
 
   return (
-    <section className="projects">
+    <section id="projects">
       <h3>PROJECTS</h3>
       <div className="project-list">
         {projectList.map((project, index) => (

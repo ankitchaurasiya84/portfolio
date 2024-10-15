@@ -15,9 +15,8 @@ const AboutMe = () => {
           <span className="dot green"></span>
         </div>
         <div className="about-content">
-          <h3>ABOUT ME</h3>
           <p>
-            Hi :) I'm Ankit Chaurasiya. Full Stack Developer :) I'm working with front-end technologies like JavaScript, React, and Material UI.
+            Hi :) I'm Ankit Chaurasiya. Full Stack Developer :) I'm working with front-end technologies like JavaScript, React.
           </p>
         </div>
       </div>

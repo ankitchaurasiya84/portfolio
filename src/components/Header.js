@@ -11,7 +11,6 @@ const Header = () => {
       <nav className="nav">
         <ul>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact Us</a></li>
           <li><a href="https://github.com/ankitchaurasiya84" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </nav>
